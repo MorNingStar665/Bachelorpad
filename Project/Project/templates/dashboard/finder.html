@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bachelor's Pad</title>
+    <link rel="stylesheet" href="/templates/dashboard/finder.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Bachelor's Pad</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/templates/test.html">Home</a></li>
+                    <li><a href="/templates/payments/plans.html">Plans</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main">
+        <div class="filter-box">
+            <h2>Filter</h2>
+            <form id="filterForm" class="form">
+                <div class="form-group">
+                    <label for="price">Price:</label>
+                    <input type="range" id="price" name="price" min="0" max="2000" step="100" value="0">
+                    <span id="priceValue">$0</span>
+                </div>
+                <div class="form-group">
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location">
+                </div>
+                <div class="form-group">
+                    <label for="area">Area:</label>
+                    <input type="text" id="area" name="area">
+                </div>
+                <div class="form-group">
+                    <label for="type">Type:</label>
+                    <select id="type" name="type">
+                        <option value="">All</option>
+                        <option value="room">Room</option>
+                        <option value="pg">PG</option>
+                    </select>
+                </div>
+                <button type="submit" class="apply-btn">Apply Filters</button>
+            </form>
+        </div>
+
+        <div class="listings">
+            <div class="house-box" data-location="ABC Street" data-area="Downtown" data-price="1500" data-type="room">
+                <img src="/templates/dashboard/listings/img/image1.jpg" alt="House Image">
+                <h3>House Name 1</h3>
+                <p class="location">Location: ABC Street</p>
+                <p class="price">Price: $1500/month</p>
+                <p class="area">Area: Downtown</p>
+                <p class="type">Type: Room</p>
+                <a href="/templates/dashboard/listings/house1.html" class="view-details-btn">View Details</a>
+            </div>
+            <div class="house-box" data-location="XYZ Avenue" data-area="Suburb" data-price="1700" data-type="pg">
+                <img src="/templates/dashboard/listings/img/image2.jpg" alt="House Image">
+                <h3 >House Name</h3>
+                <p class="location">Location: XYZ Avenue</p>
+                <p class="price">Rental Cost: $2000/month</p>
+                <p class="area">Area: Downtown</p>
+                <p class="type">Type: Room</p>
+                <a href="/templates/dashboard/listings/house2.html" class="view-details-btn">View Details</a>
+            </div>
+            <div class="house-box" data-location="XYZ Avenue" data-area="New York" data-price="1200" data-type="pg">
+                <img src="/templates/dashboard/listings/img/image3.jpg" alt="House Image">
+                <h3>Behrod ke Raja</h3>
+                <p class="location">Location: Udaipur /Tailor ke baju main</p>
+                <p class="price">Rental Cost: $Aukat ke Bahar/month</p>
+                <p class="area">Area: Bhola Bazar</p>
+                <p class="type">Type: 1RK</p>
+                <a href="/templates/dashboard/listings/house3.html" class="view-details-btn">View Details</a>
+            </div>
+            <div class="house-box">
+                <img src="/templates/dashboard/listings/img/image4.jpg" alt="House Image">
+                <h3>Mehran</h3>
+                <p class="location">Location: Time Square Lane</p>
+                <p class="price">Rental Cost: $ Budget ke Bahar/month</p>
+                <p class="area">Area: DownTown Navi Mumbai</p>
+                <p class="type">Type: Villa</p>
+                <a href="/templates/dashboard/listings/house4.html" class="view-details-btn">View Details</a>
+            </div>
+            <div class="house-box">
+                <img src="/templates/dashboard/listings/img/image5.jpg" alt="House Image">
+                <h3>House Name</h3>
+                <p class="location">Location: XYZ Avenue</p>
+                <p class="price">Rental Cost: $2000/month</p>
+                <p class="area">Area: Downtown</p>
+                <p class="type">Type: Room</p>
+                <a href="/templates/dashboard/listings/house5.html" class="view-details-btn">View Details</a>
+            </div>
+            <div class="house-box">
+                <img src="/templates/dashboard/listings/img/image6.jpg" alt="House Image">
+                <h3 >House Name</h3>
+                <p class="location">Location: XYZ Avenue</p>
+                <p class="price">Rental Cost: $2000/month</p>
+                <p class="area">Area: Downtown</p>
+                <p class="type">Type: Flat</p>
+                <a href="/templates/dashboard/listings/house6.html" class="view-details-btn">View Details</a>
+            </div>
+            <div class="house-box">
+                <img src="/templates/dashboard/listings/img/image7.jpg" alt="House Image">
+                <h3>House Name</h3>
+                <p class="location">Location: XYZ Avenue</p>
+                <p class="price">Rental Cost: $2000/month</p>
+                <p class="area">Area: Downtown</p>
+                <p class="type">Type: PG</p>
+                <a href="/templates/dashboard/listings/house7.html" class="view-details-btn">View Details</a>
+            </div>
+            <div class="house-box">
+                <img src="/templates/dashboard/listings/img/image8.jpg" alt="House Image">
+                <h3>House Name</h3>
+                <p class="location">Location: XYZ Avenue</p>
+                <p class="price">Rental Cost: $2000/month</p>
+                <p class="area">Area: Downtown</p>
+                <p class="type">Type: PG</p>
+                <a href="/templates/dashboard/listings/house8.html" class="view-details-btn">View Details</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Bachelor's Pad</p>
+    </footer>
+
+<!-- Javascript -->
+<script src="finder.js"></script>
+</body>
+
+</html>
