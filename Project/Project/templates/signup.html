@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SignUp Page</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='login/logo.png') }}" alt="Logo">
+        </div>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul class="flashes">
+              {% for message in messages %}
+                <li>{{ message }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+
+<!-- rest of the template -->
+        <form method="post" action="/Signup" onsubmit="return auth.signup();">
+            <h2>Sign Up</h2>
+            <div class="input-group">
+                <label for="f_name">First Name</label>
+                <input type="text" id="f_name" name="f_name" required placeholder="John">
+            </div>
+            <div class="input-group">
+                <label for="l_name">Last Name</label>
+                <input type="text" id="l_name" name="l_name" required placeholder="Doe">
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="XXXX@example.com">
+            </div>
+            <div class="input-group">
+                <label for="p_number">Phone Number:</label>
+                <select id="country_code" name="country_code">
+                    <option value="+1">+1 (USA)</option>
+                    <option value="+86">+86 (China)</option>
+                    <option value="+49">+49 (Germany)</option>
+                    <option value="+91">+91 (India)</option>
+                </select>
+                <input type="text" id="p_number" name="p_number" required pattern="[0-9]{5} [0-9]{5}" placeholder="XXXXX XXXXX">
+            </div>
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required placeholder="adam">
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="****">
+            </div>
+            <div class="input-group">
+                <label for="confirm_password">Confirm Password</label>
+                <input type="password" id="confirm_password" name="confirm_password" required placeholder="****">
+            </div>
+            <div class="input-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

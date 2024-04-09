@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payments Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+
+        :root {
+            --primary-color: #1B1A55;
+            --secondary-color: #E1AFD1;
+            --accent-color: #9290C3;
+            --light-gray: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .navbar {
+            background-color: var(--primary-color);
+            box-shadow: 0 2px 4px ;
+        }
+        .navbar-brand {
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.8rem;
+        }   
+        .navbar-nav .nav-item .nav-link {
+            color: #fff;
+        }
+        .navbar-nav .nav-item .nav-link:hover {
+            color: var(--secondary-color);
+            font-size: 17px;
+        }
+
+        .main-container {
+            background-color: var(--light-gray);
+            min-height: 100vh;
+            padding: 80px;
+        }
+        .card{
+            border-radius: 12px;
+        }
+
+        .pricing-table .card {
+            border: none;
+            background-color: var(--accent-color);
+            color: #fff;
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .pricing-table .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .pricing-table .card-header {
+            background-color: var(--primary-color);
+            color: #fff;
+            border-radius: 15px 15px 0 0;
+            padding: 20px;
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-align: center;
+        }
+        .pricing-table .card-body {
+            padding: 30px;
+        }
+        .pricing-table .card-body .card-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .pricing-table .card-body .card-text {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .pricing-table .card-body ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+        .pricing-table .card-body ul li {
+            margin-bottom: 10px;
+        }
+        .pricing-table .card-body .btn {
+            background-color: var(--primary-color);
+            color: #fff;
+            border: none;
+            padding: 15px 25px;
+            font-size: 1.4rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border-radius: 25px;
+        }
+        .pricing-table .card-body .btn:hover {
+            background-color: var(--secondary-color);
+        }
+        .btn-pre:hover{
+            background-color: #9290C3;
+        }
+        .btn-pro {
+            background-color: #535C91;
+            
+        }
+        .btn-pro:hover{
+            background-color: #1B1A55;
+        }
+
+        .about-us {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+        }
+        .about-us h2 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+        }
+        .about-us p {
+            font-size: 1.6rem;
+            margin-bottom: 30px;
+        }
+
+        .footer {
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer a:hover {
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="logo navbar-brand" style="color: white;" href="/dashboard">Bachelor Pad</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/dashboard">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Free</h3>
+                            <h5>Get started with the essentials for apartment hunting</h5>
+                        </div>
+                        <div class="card-body">
+                            <span><h5 class="card-title">₹0/month</h5></span>
+                            <p class="card-text">Find the perfect plan that suits your apartment hunting needs</p>
+                            <ul>
+                                <li>Create a profile to save your preferences</li>
+                                <li>Receive basic listing recommendations</li>
+                                <li>Limited direct messaging with landlords/roommates</li>
+                                <li>Access to basic search filters</li>
+                            </ul>
+                            <button class="btn btn-pre btn-outline-secondary d-inline-flex align-items-center" type="button"  onclick="window.location.href='/dashboard'">
+                                Continue with Free
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Basic</h3>
+                            <h5 class="card-title">Upgrade for more advanced features and listings</h5>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">₹9.99/month</h5>
+                            <p class="card-text">Upgrade for more advanced features and listings</p>
+                            <ul>
+                                <li>All features of FREE plan</li>
+                                <li>Unlock premium listing recommendations</li>
+                                <li>Unlimited direct messaging with landlords/roommates</li>
+                                <li>Access to advanced search filters</li>
+                                <li>Priority customer support</li>
+                                <li>Unlimited direct messaging with landlords/roommates</li>
+                                <li>Access to advanced search filters</li>
+                                <li>Priority customer support</li>
+                            </ul>
+                            <button class="btn btn-pro btn-primary d-inline-flex align-items-center" type="button"  onclick="window.location.href='{{ url_for('static', filename='/payments/gateway/paymentPage.html') }}'">
+                                Try the Basic Plan
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Pro</h3>
+                            <h5 class="card-title">Experience the ultimate apartment hunting package</h5>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">₹19.99/month</h5>
+                            <p class="card-text">Experience the ultimate apartment hunting package</p>
+                            <ul>
+                                <li>All features of BASIC plan</li>
+                                <li>Exclusive access to top-tier listings</li>
+                                <li>Advanced matching algorithms for personalized recommendations</li>
+                                <li>Enhanced security features for communication</li>
+                                <li>Dedicated account manager for personalized assistance</li>
+                                <li>Unlimited direct messaging with landlords/roommates</li>
+                                <li>Access to advanced search filters</li>
+                                <li>Priority customer support</li>
+                                <li>Unlimited direct messaging with landlords/roommates</li>
+                                <li>Access to advanced search filters</li>
+                                <li>Priority customer support</li>
+                            </ul>
+                            <button class="btn btn-pro btn-primary d-inline-flex align-items-center" type="button" onclick="window.location.href='{{ url_for('static', filename='/payments/gateway/paymentPage.html') }}'">
+                                Try the Pro Plan
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>About Us</h2>
+                    <p class="lead">Welcome to Bachelor Pad, your ultimate destination for finding the perfect apartment and roommates in top cities across India. With us, apartment hunting becomes hassle-free and convenient. Join our vibrant community today!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Top Cities</h3>
+                    <ul class="list-unstyled">
+                        <li>Bangalore</li>
+                        <li>Pune</li>
+                        <li>Mumbai</li>
+                        <li>Hyderabad</li>
+                        <li>Ahmedabad</li>
+                        <li>Delhi</li>
+                        <li>Noida</li>
+                        <li>Gurgaon</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>Communities</h3>
+                    <ul class="list-unstyled">
+                        <li>Flat and Flatmates Bangalore</li>
+                        <li>Flat and Flatmates Pune</li>
+                        <li>Flat and Flatmates Mumbai</li>
+                        <li>Flat and Flatmates Hyderabad</li>
+                        <li>Flat and Flatmates Ahmedabad</li>
+                        <li>Flat and Flatmates Delhi</li>
+                        <li>Flat and Flatmates Noida</li>
+                        <li>Flat and Flatmates Gurgaon</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>Services</h3>
+                    <ul class="list-unstyled">
+                        <li>Find a Roommate</li>
+                        <li>Advertise a room</li>
+                        <li>Post a room wanted ad</li>
+                        <li>Advertise a full apartment</li>
+                        <li>Flat and Flatmates Communities</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-12 text-center">
+                    <h3>Company</h3>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="#">Contact Us</a></li>
+                        <li class="list-inline-item"><a href="#">Terms of Use</a></li>
+                        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                        <li class="list-inline-item"><a href="#">Refund Policy</a></li>
+                        <li class="list-inline-item"><a href="#">Sitemap</a></li>
+                    </ul>
+                    <p class="mt-3">FOLLOW US ON</p>
+                    <p>Bachelors Pad ⓒ 2023. All rights reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>   
+
+
+</body>
+</html>
